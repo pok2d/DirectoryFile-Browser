@@ -1,5 +1,4 @@
 import os
-
 # Just starting description, gives instructions to the user.
 print("Welcome to the directory/file/folder lister! We start at your home.")
 print("Put the number of a file/place to go there. You can't go to files, and you can always go back to a past directory with 'back'.")
@@ -17,7 +16,7 @@ while True:
     except:
         # This block runs if it was a file selected earlier, and will inform the user it was a file.
         # It will also delete the recent file of our directory path, so they go back to the directory
-        # that they were just in.
+        # that they were just in.imp
         print('Hey! That aint a directory!')
         currentdirectory = currentdirectory[0:currentdirectory.rfind('/')]
     # This for loop creates the format with 5 (or less) files/directories on each line with a number
@@ -47,11 +46,20 @@ while True:
         if currentdirectory.count('/') == 1:
             print('ya cant go back!')
             continue
-        # Otherwise, it if is okay to go back, it will make the new path starting from the first character
+        # Otherwise, if it is okay to go back, it will make the new path starting from the first character
         # to the last slash, essentially cutting of the last term of our path.
         currentdirectory = currentdirectory[0:currentdirectory.rfind('/')]
     # This is the else statement if the user doesn't want to go back. This hopefully means they have
     # inputed a number to a directory.
+    elif newplacenum == 'TicTacToe':
+        os.chdir('/home/pok/PycharmProjects/TicTacToe/TicTacToe-Version1-Pygame/')
+        os.system('python3 main.py')
+    elif newplacenum == 'Pyraph':
+        os.chdir('/home/pok/PycharmProjects/Pyraph/PyraphCalculator/')
+        os.system('python3 main.py')
+    elif newplacenum == 'Inception':
+        os.chdir('/home/pok/PycharmProjects/FileBrowser/DirectoryFile-Browser/')
+        os.system('python3 FileBrowser.py')
     else:
         # Here it will try to take their input and make it as a integer, and then use it to get the
         # item corresponding to that number with the currentitems list.
@@ -64,3 +72,4 @@ while True:
         # it will then just go back to the beginning print the path options and again and do a new input.
         except:
             print('Not a valid number bro')
+            print(currentdirectory)
