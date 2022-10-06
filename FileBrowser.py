@@ -1,7 +1,8 @@
 import os
 # Just starting description, gives instructions to the user.
 print("Welcome to the directory/file/folder lister! We start at your home.")
-print("Put the number of a file/place to go there. You can't go to files, and you can always go back to a past directory with 'back'.")
+print("Put the number of a file/place to go there. You can't go to files, and you can always go back to a past "
+      "directory with 'back'.")
 
 # Starts at /home directory
 currentdirectory = '/home'
@@ -61,7 +62,7 @@ while True:
         os.chdir('/home/pok/PycharmProjects/FileBrowser/DirectoryFile-Browser/')
         os.system('python3 FileBrowser.py')
     else:
-        # Here it will try to take their input and make it as a integer, and then use it to get the
+        # Here it will try to take their input and make it as an integer, and then use it to get the
         # item corresponding to that number with the currentitems list.
         try:
             # It takes this new place, from the currentitems list, and adds it onto the end of our
